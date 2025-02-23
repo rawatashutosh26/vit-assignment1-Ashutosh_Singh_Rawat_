@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table with Specific Shapes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .oval-container {
+            width: 1200px;
+            padding: 20px;
+            border: 2px solid #88CCCC;
+            border-radius: 50px;
+            margin-bottom: 40px;
+        }
+
+        .data-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        .data-table th, 
+        .data-table td {
+            padding: 12px 15px;
+            background-color: #B3E6E6;
+            border: 1px solid #88CCCC;
+        }
+
+        .data-table th {
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .data-table th, 
+        .data-table td {
+            border-radius: 15px;
+            margin: 2px;
+        }
+
+        .shapes-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            width: 800px;
+        }
+
+        .shape {
+            width: 200px;
+            height: 120px;
+            border: 2px solid #90EE90;
+        }
+
+        /* First row - rectangular with different corner roundings */
+        .shape-1 {
+            border-radius: 5px;
+        }
+
+        .shape-2 {
+            border-radius: 10px;
+        }
+
+        .shape-3 {
+            border-radius: 25px;
+        }
+
+        /* Second row - more rounded rectangles */
+        .shape-4 {
+            border-radius: 20px;
+        }
+
+        .shape-5 {
+            border-radius: 2px;
+        }
+
+        .shape-6 {
+            border-radius: 30px;
+        }
+
+        /* Third row - mix of shapes */
+        .shape-7 {
+            border-radius: 50%;  /* Complete oval */
+        }
+
+        .shape-8 {
+            border-radius: 15px;
+        }
+
+        .shape-9 {
+            border-radius: 10px 30px 10px 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="oval-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>80</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="shapes-container">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+        
+        <div class="shape shape-7"></div>
+        <div class="shape shape-8"></div>
+        <div class="shape shape-9"></div>
+    </div>
+</body>
+</html>

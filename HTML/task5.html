@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: blue;
+            text-align: center;
+            font-size: 2em;
+        }
+        
+        .form-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        
+        .form-row label {
+            font-weight: bold;
+        }
+        
+        .form-row input[type="text"],
+        .form-row input[type="email"],
+        .form-row input[type="password"],
+        .form-row input[type="tel"],
+        .form-row select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        
+        .form-row textarea {
+            width: 100%;
+            height: 80px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        
+        .language-options {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .declaration {
+            margin: 20px 0;
+        }
+        
+        .login-link {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        
+        .register-button {
+            text-align: center;
+        }
+        
+        button {
+            padding: 8px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration form</h1>
+    
+    <form class="form-container">
+        <div class="form-row">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        
+        <div class="form-row">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        
+        <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-row">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <div class="form-row">
+            <label for="rePassword">Re-enter Password</label>
+            <input type="password" id="rePassword" name="rePassword" required>
+        </div>
+        
+        <div class="form-row">
+            <label>Gender:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        
+        <div class="form-row">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-row">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" required></textarea>
+        </div>
+        
+        <div class="form-row">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+        
+        <div class="form-row">
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+                <option value="">Choose your country</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <!-- Add more countries as needed -->
+            </select>
+        </div>
+        
+        <div class="form-row">
+            <label>Languages known</label>
+            <div class="language-options">
+                <div>
+                    <input type="checkbox" id="english" name="languages" value="english">
+                    <label for="english">English</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="kannada" name="languages" value="kannada">
+                    <label for="kannada">Kannada</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="hindi" name="languages" value="hindi">
+                    <label for="hindi">Hindi</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="telugu" name="languages" value="telugu">
+                    <label for="telugu">Telugu</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="declaration">
+            <input type="checkbox" id="declare" name="declare" required>
+            <label for="declare">Hereby I declare all the given details are true</label>
+        </div>
+        
+        <div class="login-link">
+            Log in to <a href="https://ethnus.com">Ethnus website</a>
+        </div>
+        
+        <div class="register-button">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</body>
+</html>
